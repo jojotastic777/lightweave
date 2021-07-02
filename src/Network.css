@@ -1,0 +1,20 @@
+.Network table th {
+  text-align: left;
+}
+
+.Network table {
+  border-collapse: collapse;
+}
+
+.Network table tbody tr {
+  height: 100%;
+}
+
+.Network table {
+  border-style: hidden;
+}
+
+.Network table th, .Network table td {
+  border: 1px solid #303030;
+  padding: 0.3em;
+}

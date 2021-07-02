@@ -1,20 +1,23 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
+import Clock from "./Clock";
+import Network from "./Network";
+import Versions from "./Versions";
+import Wifi from "./Wifi";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>Built using CRA electron-builder-typescript Template.</p>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>public/electron.js</code> or <code>src/App.js</code> and
-          save to reload.
-        </p>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  public render() {
+    return (
+      <div className="App">
+        <Clock />
+        <div className="flexContainer">
+          <Versions />
+          <Network />
+          <Wifi />
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;

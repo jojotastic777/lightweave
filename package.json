@@ -1,6 +1,11 @@
 {
   "name": "lightweave",
   "version": "0.1.0",
+  "author": {
+    "name": "jojotastic777",
+    "email": "jojotastic777@gmail.com"
+  },
+  "description": "Lightweave AMSUR Interface Software",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
@@ -23,6 +28,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "dist":"yarn build && electron-builder -c.extraMetadata.main=build/electron.js",
     "dist:win": "yarn build && electron-builder -w -c.extraMetadata.main=build/electron.js",
     "dist:mac": "yarn build && electron-builder -m -c.extraMetadata.main=build/electron.js",
     "dist:linux": "yarn build && electron-builder -l -c.extraMetadata.main=build/electron.js",
@@ -57,8 +63,8 @@
   "homepage": "./",
   "main": "./public/electron.js",
   "build": {
-    "appId": "com.electron.my_app",
-    "productName": "My App",
+    "appId": "com.electron.lightweave",
+    "productName": "Lightweave",
     "files": [
       "build/**/*",
       "node_modules/**/*"
@@ -67,16 +73,12 @@
       "buildResources": "public"
     },
     "mac": {
-      "target": "dmg",
-      "category": "utilities",
-      "type": "development"
+      "category": "utilities"
     },
     "win": {
-      "target": "nsis",
       "icon": "./public/logo512.png"
     },
     "linux": {
-      "target": "deb",
       "category": "Development"
     }
   }

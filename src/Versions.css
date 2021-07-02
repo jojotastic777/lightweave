@@ -1,0 +1,16 @@
+.Versions table th {
+  text-align: left;
+}
+
+.Versions table, .Versions table th, .Versions table td {
+  border-collapse: collapse;
+}
+
+.Versions table {
+  border-style: hidden;
+}
+
+.Versions table th, .Versions table td {
+  border: 1px solid #303030;
+  padding: 0.3em;
+}

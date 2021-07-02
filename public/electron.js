@@ -13,15 +13,17 @@ if (isDev) {
 
 function createWindow() {
   const mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 1920/2,
+    height: 1080/2,
     webPreferences: {
       nodeIntegration: false,
       contextIsolation: true,
-      enableRemoteModule: false,
+      enableRemoteModule: true,
       preload: path.join(__dirname, "preload.js"),
     },
   });
+
+  mainWindow.removeMenu()
 
   // Load from localhost if in development
   // Otherwise load index.html file
@@ -34,6 +36,9 @@ function createWindow() {
   // Open DevTools if in dev mode
   if (isDev) {
     mainWindow.webContents.openDevTools({ mode: "detach" });
+  } else {
+    mainWindow.maximize()
+    mainWindow.setFullScreen(true)
   }
 }
 
